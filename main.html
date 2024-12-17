@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<script type="importmap">
+    {
+      "imports": {
+        "@material/web/": "https://esm.run/@material/web/"
+      }
+    }
+</script>
+<script type="module">
+    import '@material/web/all.js';
+    import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+</script>
+<style>
+    button {
+        padding: 20px;
+        margin: 5px;
+    }
+
+    .container {
+        background-color: blueviolet;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        color: rgb(3, 40, 96);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    h3 {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-color: rgb(107, 122, 255);
+    }
+
+    .formbox {
+        height: 200px;
+        border-style: solid;
+        border-radius: 10px; /* Makes corners round */
+        background-color: rgb(68, 190, 255);
+        text-align: center;
+    }
+
+    /* Custom Elevated Button */
+    .custom-elevated-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: white;
+        color: #333;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .custom-elevated-button:hover {
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .custom-elevated-button:active {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        transform: translateY(2px);
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <md-elevated-button>One</md-elevated-button>
+        <md-elevated-button>Two</md-elevated-button>
+        <md-elevated-button>Three</md-elevated-button>
+    </div>
+
+    <h1 class="title">Akshar Patel</h1>
+    <h3>About Me</h3>
+    <h4>Hi, I like to play video games and do origami</h4>
+
+    <!-- Custom Elevated Button -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="custom-elevated-button">Custom Elevated Button</button>
+    </div>
+</body>
+</html>
